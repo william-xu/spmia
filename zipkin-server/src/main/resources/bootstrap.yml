@@ -1,0 +1,25 @@
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG
+
+
+#management:
+#  metrics:
+#    web:
+#      server:
+#        auto-time-requests: false
+
+spring:
+  application:
+    name: zipkinserver
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://192.168.43.104:8761/eureka/        

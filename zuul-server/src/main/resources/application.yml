@@ -1,0 +1,22 @@
+server:
+  port: 5555
+
+  #Setting logging levels
+logging:
+    level:
+      com.netflix: WARN
+      org.springframework.web: WARN
+      com.thoughtmechanix: DEBUG
+      org.springframework.security.web: DEBUG
+
+zuul:
+  prefix:  /api
+  routes:
+    organizationservice: /organization/**
+    licensingservice: /licensing/**
+  
+#proxy:
+#  auth:
+#    routes:
+#      licensingservice: passthru 
+#      organizationservice: oauth2 

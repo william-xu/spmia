@@ -1,0 +1,12 @@
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+#    org.springframework.security.web: DEBUG
+    com.thoughtmechanix: DEBUG
+    
+server:
+  port: 9999
+  servlet:
+    contextPath: /auth

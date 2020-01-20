@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: organizationservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+#      uri: http://192.168.43.104:8888
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: configserver
+    stream:
+      bindings:
+        output:
+            destination:  orgChangeTopic
+            content-type: application/json
+      kafka:
+        binder:
+          zkNodes: 192.168.43.104
+          brokers: 192.168.43.104
+  zipkin:
+    baseUrl: http://192.168.43.104:9411/
+           
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://192.168.43.104:8761/eureka/
+encrypt:
+    key: spmia.2018

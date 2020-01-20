@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: zuulservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: configserver
+        
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://192.168.43.104:8761/eureka/        
+
+zuul.sensitiveHeaders: Cookie,Set-Cookie
+
+proxy:
+  auth:
+    routes:
+      licensingservice: passthru
+      organizationservice: oauth2
+
+
+ribbon:
+  ReadTimeout: 6000000
+  ConnectTimeout: 6000000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+hystrix:
+  command:
+    c4i-store:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000000
+            ribbon:
+              ReadTimeout: 600000
+              ConnectTimeout: 600000

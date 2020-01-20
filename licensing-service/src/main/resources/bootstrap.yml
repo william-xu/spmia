@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: licensingservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: configserver
+    stream:
+      bindings:
+        inboundOrgChanges:
+          destination: orgChangeTopic
+          content-type: application/json
+          group: licensingGroup
+      kafka:
+        binder:
+          zkNodes: 192.168.43.104
+          brokers: 192.168.43.104        
+  zipkin:
+    baseUrl: http://192.168.43.104:9411/
+        
+encrypt:
+    key: spmia.2018
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.43.104:8761/eureka/
+      
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://192.168.43.104:9999/auth/user
+#    client:
+#      clientId: eagleeye
+#      clientSecret: thisissecret
+
+#ribbon:
+#  eureka:
+#    enabled: true

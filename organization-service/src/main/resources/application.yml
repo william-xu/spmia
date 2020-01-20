@@ -1,0 +1,13 @@
+server:
+  port: 9185
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://192.168.43.104:9999/auth/user  
+      
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG
