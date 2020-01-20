@@ -1,4 +1,4 @@
-package com.xwl.spmia.organization.model;
+package org.xwl.mia.organization.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

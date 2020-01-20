@@ -1,4 +1,4 @@
-package com.xwl.spmia.organization;
+package org.xwl.mia.organization;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

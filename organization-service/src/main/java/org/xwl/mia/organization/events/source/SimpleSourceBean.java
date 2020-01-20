@@ -1,4 +1,4 @@
-package com.xwl.spmia.organization.events.source;
+package org.xwl.mia.organization.events.source;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,9 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.stereotype.Component;
-
-import com.xwl.spmia.organization.events.models.OrganizationChangeModel;
-import com.xwl.spmia.organization.utils.UserContext;
+import org.xwl.mia.organization.events.models.OrganizationChangeModel;
+import org.xwl.mia.organization.utils.UserContext;
 
 @Component
 public class SimpleSourceBean {

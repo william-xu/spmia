@@ -1,4 +1,4 @@
-package com.xwl.spmia.organization.events.models;
+package org.xwl.mia.organization.events.models;
 
 public class OrganizationChangeModel{
     private String type;

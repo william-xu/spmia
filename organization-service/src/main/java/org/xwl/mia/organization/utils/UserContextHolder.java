@@ -1,4 +1,4 @@
-package com.xwl.spmia.organization.utils;
+package org.xwl.mia.organization.utils;
 
 
 import org.springframework.util.Assert;

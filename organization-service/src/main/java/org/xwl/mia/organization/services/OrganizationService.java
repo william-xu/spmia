@@ -1,4 +1,4 @@
-package com.xwl.spmia.organization.services;
+package org.xwl.mia.organization.services;
 
 import java.util.UUID;
 
@@ -6,14 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.xwl.spmia.organization.events.source.SimpleSourceBean;
-import com.xwl.spmia.organization.model.Organization;
-import com.xwl.spmia.organization.repository.OrganizationRepository;
+import org.xwl.mia.organization.events.source.SimpleSourceBean;
+import org.xwl.mia.organization.model.Organization;
+import org.xwl.mia.organization.repository.OrganizationRepository;
 
 import brave.Span;
 import brave.Tracer;
-import brave.Tracing;
 
 @Service
 public class OrganizationService {

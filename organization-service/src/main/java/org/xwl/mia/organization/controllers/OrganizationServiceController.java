@@ -1,4 +1,4 @@
-package com.xwl.spmia.organization.controllers;
+package org.xwl.mia.organization.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.xwl.spmia.organization.model.Organization;
-import com.xwl.spmia.organization.services.OrganizationService;
+import org.xwl.mia.organization.model.Organization;
+import org.xwl.mia.organization.services.OrganizationService;
 
 @RestController
 @RequestMapping(value="v1/organizations")

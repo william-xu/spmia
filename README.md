@@ -4,6 +4,7 @@
 * Spring Boot版本：2.0.6.RELEASE
 * Spring Cloud版本： Finchley.SR2
 * Java 版本： 1.8
+* Kafka版本： kafka_2.12-2.3.1
 
 
 ## 运行准备
@@ -24,4 +25,6 @@
 8. 启动licensing-service
 
 ## 其他
-刚整理完毕，未测试
+* 刚整理完毕，未测试
+* 可使用postman进行测试
+* 先调用验证服务器auth/**oauth/token**接口获取token，然后添加token去调用组织服务或者许可证服务接口

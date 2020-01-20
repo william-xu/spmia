@@ -1,12 +1,12 @@
-package com.xwl.spmia.organization.utils;
+package org.xwl.mia.organization.utils;
+
+import java.io.IOException;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
-
-import java.io.IOException;
 
 public class UserContextInterceptor implements ClientHttpRequestInterceptor {
 
