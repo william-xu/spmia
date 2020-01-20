@@ -9,7 +9,8 @@
 
 ## 运行准备
 
-* 启动MySQL数据库服务器，创建示例使用数据库并修改项目中相关配置信息
+* 启动MySQL数据库服务器，创建示例所需数据库并修改项目中相关配置信息
+* 各个服务sql脚本查看相应src\main\resources\schema.sql文件，或者到https://github.com/carnellj中查看
 * 启动Zookeeper和Kafka
 
 ## 运行
